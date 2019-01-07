@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"indust-app.creations"},{"v":1,"unique":true,"key":{"houzz_url":1},"name":"houzz_url_1","ns":"indust-app.creations","background":true}]}

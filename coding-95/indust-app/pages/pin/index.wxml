@@ -1,0 +1,32 @@
+<!--index.wxml-->
+
+<view class="page">
+  <block wx:if="{{!logined}}">
+    <view class="loginedbox">
+      <text class="header">登录后才能帮你存下来收藏的图片哦！</text>
+      <button class="btn" bindtap="login">马上登录</button>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="container">
+      <view bindtap="bindViewTap" class="userinfo">
+        <image class="userinfo-avatar" src="{{user.avatar}}" background-size="cover"></image>
+        <text class="userinfo-nickname">亲爱哒 {{user.nickname}}，您的收集</text>
+      </view>
+    </view>
+    <view wx:for-items="{{categories}}" wx:for-item="item" wx:key="{{_id}}">
+      <block wx:if="{{item.creations.length > 0}}">
+        <text class="title">{{item.categoryName}}</text>
+        <view class="carousel">
+          <scroll-view scroll-x="true" style="width: 100%">
+            <navigator url="../list/index?id={{item._id}}&self=1">
+              <block wx:for-items="{{item.creations}}" wx:for-item="creation" wx:key="{{index}}">
+                <image src="{{qiniu.creation}}{{creation}}" class="carousel-image" />
+              </block>
+            </navigator>
+          </scroll-view>
+        </view>
+      </block>
+    </view>
+  </block>
+</view>

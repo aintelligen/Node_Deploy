@@ -1,0 +1,55 @@
+<view class="cover">
+  <image mode="widthFix" bindtap="previewPhoto" src="{{qiniu.creation}}{{qiniu_photo}}" data-url="{{qiniu.creation}}{{qiniu_photo}}"></image>
+</view>
+
+<view class="commentbox {{focused ? 'focused' : ''}}" animation="{{animation}}">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <textarea class="comment-field" name="content" auto-height bindfocus="commentFocus" bindblur="commentBlur" value="{{content}}" />
+    <button formType="submit">
+      <block wx:if="{{!submiting}}">
+        <text>提交评论</text>
+      </block>
+      <block wx:else>
+        <text>正在提交</text>
+      </block>
+    </button>
+  </form>
+</view>
+
+<block wx:if="{{comments.length > 0}}">
+  <view class="comments">
+    <Text class="comment-title">共 {{comments.length}} 条精彩评论：</Text>
+    <block wx:for="{{comments}}" wx:key="{{_id}}">
+      <view class="comment-item" id="{{item._id}}">
+        <view class="comment-owner">
+          <image class="comment-avatar" src="{{item.replyBy.avatar}}" id="{{item.user._id}}"></image>
+        </view>
+        <view class="comment-info">
+          <text class="comment-name">{{item.replyBy.nickname}}</text>
+          <view class="comment-content">{{item.content}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
+<block wx:else>
+  <view class="none-comments">
+    <text>此地荒芜，尚无评论...</text>
+  </view>
+</block>
+
+<view class="comment-bar">
+  <view class="count-tab">
+    <text class="bar-text pin-number">{{pinCount}} 人已收集</text>
+  </view>
+  <view class="pin-tab">
+    <image class="pin-image" data-id="{{creation._id}}" bindtap="pinCreation" src="../../images/pin{{pined ? '_selected.png' : '.png'}}"></image>
+  </view>
+  <view class="comment-tab" bindtap="willComment">
+    <text class="bar-text">我要评论</text>
+  </view>
+</view>
+
+<block wx:if="{{willPop}}">
+  <view class="musk" bindtap="leaveComment"></view>
+</block>

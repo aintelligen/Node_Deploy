@@ -1,0 +1,7 @@
+{
+  "port": 3004,
+  "appID": "你的为你 appID",
+  "appSecret": "你的微信 appSecret",
+  "baseUrl": "http://你的微信配置地址/nodeport",
+  "token": "你的微信 Token"
+}

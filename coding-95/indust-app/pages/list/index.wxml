@@ -1,0 +1,19 @@
+<view class="container">
+  <scroll-view class="photos" scroll-y="true" bindscrolltolower="getCreations">
+    <view class="photo-list">
+      <block wx:for="{{creations}}" wx:key="_id" wx:for-index="idx">
+        <view class="photo-item">
+          <image class="icon-detail {{item.showLayer && 'show-layer'}}" src="../../images/detail.png"></image>
+          <image class="icon-comments {{item.showLayer && 'show-layer'}}" src="../../images/comments.png"></image>
+          <image class="pin {{item.showLayer && 'show-layer'}}" src="../../images/pin{{item.pined ? '_selected.png' : '.png'}}"></image>
+          
+          <view data-id="{{item._id}}" data-photo="{{item.qiniu_photo}}" class="detail-layer {{item.showLayer && 'show-layer'}}" bindtap="reviewCreation"></view>
+          
+          <view data-idx="{{idx}}" data-id="{{item._id}}" class="pin-layer {{item.showLayer && 'show-layer'}}" bindtap="pinCreation"></view>
+
+          <image class="photo" src="{{qiniu.creation}}{{item.qiniu_thumb}}" data-idx="{{idx}}" data-url="{{qiniu.creation}}{{item.qiniu_photo}}" data-id="{{item._id}}" bindtap="previewPhoto" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend" animation="{{item.animation}}"></image>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

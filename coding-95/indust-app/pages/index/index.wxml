@@ -1,0 +1,28 @@
+<!--index.wxml-->
+
+<view class="page">
+  <!-- <text class="title">一空作品集</text>
+  <view class="ad-list">
+    <block wx:for-items="{{ads}}" wx:for-item="item">
+      <view class="ad-item" id="{{item.id}}" catchtap="showPhoto">
+        <image class="ad-photo" src="{{item.src}}"></image>
+      </view>
+    </block>
+  </view> -->
+
+  <view wx:for-items="{{categories}}" wx:for-item="item" wx:key="{{_id}}">
+    <block wx:if="{{item.creations.length > 5}}">
+      <text class="title">{{item.categoryName}}</text>
+      <view class="carousel">
+        <scroll-view scroll-x="true" style="width: 100%">
+          <navigator url="../list/index?id={{item._id}}">
+            <block wx:for-items="{{item.creations}}" wx:for-item="creation" wx:key="{{index}}">
+              <image src="{{qiniu.creation}}{{creation.qiniu_thumb}}" class="carousel-image" />
+            </block>
+          </navigator>
+        </scroll-view>
+      </view>
+    </block>
+  </view>
+</view>
+

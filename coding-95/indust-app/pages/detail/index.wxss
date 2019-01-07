@@ -1,0 +1,220 @@
+.cover image {
+  width: 750rpx;
+}
+
+.infoBox {
+  width: 375rpx;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10rpx;
+}
+
+.avatar {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  border-radius: 30rpx;
+}
+
+.descBox {
+  flex: 1;
+}
+
+.nickname {
+  font-size: 18rpx;
+}
+
+.comment-title {
+  display: block;
+  margin: 20rpx 0;
+  font-size: 40rpx;
+  color: #484848;
+}
+
+.none-comments {
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.pin {
+  display: flex;
+  padding: 0 20rpx;
+  width: 710rpx;
+  height: 60rpx;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.pin-number {
+  width: 700rpx;
+  text-align: left;
+  color: #717171;
+}
+
+.pin-image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.comments {
+  padding: 0 15rpx 100rpx 15rpx;
+}
+
+.comment-item {
+  position: relative;
+  display: flex;
+  padding: 10rpx 0;
+  align-items: center;
+}
+
+.comment-info {
+  flex: 1;
+}
+
+.comment-owner {
+  margin-right: 20rpx;
+}
+
+.comment-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+
+.comment-name {
+  color: #484848;
+  font-size: 32rpx;
+}
+
+.comment-content {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: #717171;
+}
+
+.comment-field {
+  border: 1px solid #dddddd;
+  width: 720rpx;
+  height: 140rpx;
+}
+
+
+.loadingMore {
+  margin-vertical: 20rpx;
+}
+
+.loadingText {
+  color: #777;
+  text-align: center;
+}
+
+
+.content {
+  padding-left: 4rpx;
+  color: #333;
+  border-width: 1rpx;
+  border-color: #ddd;
+  border-radius: 4rpx;
+  font-size: 14rpx;
+  height: 90rpx;
+}
+
+.musk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 1500rpx;
+  background-color: #000;
+  opacity: 0.56;
+}
+
+.commentbox {
+  position: fixed;
+  top: -1000rpx;
+  left: 10rpx;
+  display: inline-block;
+  width: 690rpx;
+  padding: 30rpx 20rpx;
+  margin: 14rpx 0 0;
+  background: #fff;
+  border-radius: 5rpx;
+  z-index: 10;
+}
+
+.commentbox button {
+  background-color: #1AAD19;
+  color: #fff;
+  margin: 20rpx 0;
+}
+
+.comment-field {
+  width: 670rpx;
+  padding: 28rpx 10rpx;
+  color: #484848;
+  background: #f1f1f1;
+  border-radius: 10rpx;
+}
+
+.focused .comment-field {
+  text-indent: 0;
+  background: #f9f9f9;
+}
+
+.comment-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width:  100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 750rpx;
+  background-color: #fff; 
+  border-top: 1px solid #dadada;
+}
+
+
+.count-tab,
+.pin-tab,
+.comment-tab {
+  display: flex;
+  height: 90rpx;
+  flex-direction: row;
+}
+
+.count-tab {
+  width: 330rpx;
+}
+.pin-tab {
+  width: 50rpx;
+}
+.comment-tab {
+  width: 330rpx;
+}
+
+.pin-tab {
+  padding: 18rpx;
+  line-height: 90rpx;
+  border-left: 1px solid #dadada;
+}
+
+.comment-tab {
+  background-color: #484848;
+}
+
+.bar-text {
+  width: 100%;
+  font-size: 36rpx;
+  line-height: 90rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.pin-number {
+  color: #717171;
+}

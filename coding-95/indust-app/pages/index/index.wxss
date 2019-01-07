@@ -1,0 +1,50 @@
+/** index.wxss **/
+
+.ad-list {
+  width:  100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.ad-item {
+  display: flex;
+  width: 238rpx;
+  height: 238rpx;
+  flex-direction: row;
+}
+
+.ad-photo {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  display: block;
+  margin: 16rpx 0 16rpx 0;
+  font-size: 40rpx;
+  color: #717171;
+}
+
+.ad {
+  width: 373rpx;
+  height: 373rpx;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.ad-image {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+
+.header {
+  color: #333333;
+  font-size: 16px;
+}
+
+.ad-image {
+  margin: 0 4px;
+}
